@@ -1,41 +1,27 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# es6-observable [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/es6-observable/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/es6-observable)
 
-My awesome module.
+An Observable ponyfill. Re-export of [core-js-pure](https://github.com/zloirock/core-js).
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/es6-observable.png)](https://npmjs.com/package/es6-observable)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install es6-observable
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const Observable = require("es6-observable");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+const observable = new Observable(observer => {
+	observer.next("Hello World!")
+})
 ```
 
 ## API
 
-### theModule(input, options?)
+### Observable
 
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+See: https://github.com/tc39/proposal-observable.

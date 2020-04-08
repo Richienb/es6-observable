@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "es6-observable",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "An Observable ponyfill.",
+	"repository": "https://github.com/Richienb/es6-observable.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,11 +17,19 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"observable",
+		"ponyfill",
+		"spec-compliant",
+		"es6"
+	],
+	"dependencies": {
+		"core-js-pure": "^3.6.4"
+	},
 	"devDependencies": {
 		"ava": "^3.5.2",
 		"eslint-config-richienb": "^0.4.2",
+		"p-observable": "^1.0.0",
 		"xo": "^0.28.1"
 	},
 	"resolutions": {

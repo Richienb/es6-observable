@@ -1,13 +1,14 @@
 const test = require("ava")
-const theModule = require(".")
+const pObservable = require("p-observable")
+const Observable = require(".")
 
-test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
+test("main", async t => {
+	const observable = new Observable(observer => {
+		setImmediate(() => {
+			observer.next("value")
+			observer.complete()
+		})
 	})
 
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(await pObservable(observable), "value")
 })
